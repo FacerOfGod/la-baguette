@@ -1,16 +1,54 @@
-# baguette
+# La Baguette 🥖
 
-A new Flutter project.
+Application d'engagement civique pour suivre l'activité parlementaire française.
 
-## Getting Started
+## Fonctionnalités
 
-This project is a starting point for a Flutter application.
+- **Authentification** : Connexion/Inscription (Mocké pour la démo).
+- **Lois** : Consultation des propositions de loi, détails, et vote.
+- **Députés** : Liste des députés, profils détaillés, score de cohésion.
+- **Statistiques** : Visualisation des votes de la communauté (Baguette Bar).
+- **Gamification** : Badges pour l'engagement citoyen.
 
-A few resources to get you started if this is your first Flutter project:
+## Configuration
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+### Pré-requis
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+- Flutter SDK (3.10+)
+- Dart SDK
+
+### Installation
+
+1.  Cloner le dépôt.
+2.  Installer les dépendances :
+    ```bash
+    flutter pub get
+    ```
+
+### Lancer l'application
+
+Pour lancer l'application avec les données de test (Mock) :
+
+```bash
+flutter run
+```
+
+### Identifiants de test
+
+Pour la connexion (Login), vous pouvez utiliser n'importe quel email/mot de passe, ou les valeurs par défaut pré-remplies :
+- **Email** : `test@test.com`
+- **Mot de passe** : `password`
+
+## Architecture
+
+- **State Management** : Riverpod
+- **Navigation** : GoRouter
+- **Backend** : Supabase (Mocké via `MockService` pour cette version de démonstration).
+
+## Structure du projet
+
+- `lib/core` : Thèmes, constantes.
+- `lib/features` : Écrans et logique métier par fonctionnalité (Auth, Home, Laws, Deputies, Profile).
+- `lib/models` : Modèles de données.
+- `lib/services` : Services d'accès aux données (Repositories).
+- `lib/widgets` : Widgets réutilisables.
